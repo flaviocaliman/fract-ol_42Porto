@@ -10,7 +10,7 @@ $$
 z_{n+1} = z_n^2 + c
 $$
 
-![Mandelbrot](https://github.com/flaviocaliman/fract-ol_42Porto/blob/main/src/img_readme/Mandelbrot_Set.png)
+![Mandelbrot](https://github.com/flaviocaliman/fract-ol_42Porto/blob/main/src/img_readme/Mandelbrot_Set.png) Mandelbrot
 
 In this project you will also be the opportunity for you to get familiar with the MiniLibX, the school graphical library: the MiniLibX!
 This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events.
