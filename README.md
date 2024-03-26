@@ -30,3 +30,5 @@ This library was developed internally and includes basic necessary tools to open
 -> The arrows change the position of the fractal.
 
 ![Julia](https://github.com/flaviocaliman/fract-ol_42Porto/blob/main/src/img_readme/Julia_Set_-0.70_0.35.png) Julia_Set
+
+If you want to run the project, you'll need to clone the repository and download MiniLibX from the internet!
