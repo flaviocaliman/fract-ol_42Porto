@@ -10,7 +10,7 @@ $$
 z_{n+1} = z_n^2 + c
 $$
 
-<img src="/image_readme/JMandelbrot_Set.png/">
+<img src="/img_readme/JMandelbrot_Set.png/">
 
 In this project you will also be the opportunity for you to get familiar with the MiniLibX, the school graphical library: the MiniLibX!
 This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events.
@@ -30,4 +30,4 @@ This library was developed internally and includes basic necessary tools to open
 
 > The arrows change the position of the fractal.
 
-<img src="/image_readme/Julia_Set_-0.70_0.35.png/">
+<img src="/img_readme/Julia_Set_-0.70_0.35.png/">
