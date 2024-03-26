@@ -17,17 +17,15 @@ This library was developed internally and includes basic necessary tools to open
 
 ## Fractals available
 
-```bash
-./fractol Mandelbrot
-./fractol Julia [real] [imaginary]
-```
+-> ./fractol Mandelbrot
+-> ./fractol Julia [real] [imaginary]
 
 ## Features available
 
-> '+' or '-' to change Mandelbrot's color;
+-> '+' or '-' to change Mandelbrot's color;
 
-> zoom in and zoom out using the mouse wheel;
+-> zoom in and zoom out using the mouse wheel;
 
-> The arrows change the position of the fractal.
+-> The arrows change the position of the fractal.
 
 ![](https://github.com/flaviocaliman/fract-ol_42Porto/blob/main/src/img_readme/Julia_Set_-0.70_0.35.png)
