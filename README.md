@@ -35,4 +35,4 @@ This library was developed internally and includes basic necessary tools to open
 
 -> Clone the repository;
 
--> Download MiniLibX from GitHub!
+-> Download MiniLibX.
