@@ -18,6 +18,7 @@ This library was developed internally and includes basic necessary tools to open
 ## Fractals available
 
 -> ./fractol Mandelbrot
+
 -> ./fractol Julia [real] [imaginary]
 
 ## Features available
