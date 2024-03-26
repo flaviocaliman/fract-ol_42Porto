@@ -25,7 +25,7 @@ This library was developed internally and includes basic necessary tools to open
 
 -> '+' or '-' to change Mandelbrot's color;
 
--> zoom in and zoom out using the mouse wheel;
+-> Zoom in and zoom out using the mouse wheel;
 
 -> The arrows change the position of the fractal.
 
@@ -33,4 +33,6 @@ This library was developed internally and includes basic necessary tools to open
 
 ## Run the project
 
-If you want to run the project, you'll need to clone the repository and download MiniLibX from the internet!
+-> Clone the repository;
+
+-> Download MiniLibX from GitHub!
