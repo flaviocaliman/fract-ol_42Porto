@@ -6,13 +6,13 @@
 /*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:23:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/27 19:22:04 by caliman          ###   ########.fr       */
+/*   Updated: 2024/03/27 19:46:07 by caliman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void pixel_put(t_params *img, int x, int y, int iterations)
+void pixel_color(t_params *img, int x, int y, int iterations)
 {
 	char	*dst;
 
@@ -59,9 +59,9 @@ void	julia_set(t_params *params)
 			z.r = params->zoom * 2 * (x + params->x_arrow - WIDTH / 2) / (WIDTH / 2);
 			z.i = params->zoom * 2 * (y + params->y_arrow - HEIGHT / 2) / (HEIGHT / 2);
 			iterations = iterations_julia(z, c);
-			pixel_put(params, x, y, iterations * params->color / 200);
+			pixel_color(params, x, y, iterations * params->color / 200);
 			if (iterations == 0)
-				pixel_put(params, x, y, 0);
+				pixel_color(params, x, y, 0);
 		}
 	}
 	mlx_put_image_to_window(params->mlx_ptr, params->mlx_win, params->img, 0, 0);
@@ -106,9 +106,9 @@ void	mandelbrot_set(t_params *params)
 			z.r = params->zoom * 2 * (x + params->x_arrow - WIDTH / 1.7) / (WIDTH / 1.7);
 			z.i = params->zoom * 2 * (y + params->y_arrow- HEIGHT / 2) / (HEIGHT / 2);
 			iterations = iterations_mandelbrot(z);
-			pixel_put(params, x, y, (iterations * 10003 * params->color));
+			pixel_color(params, x, y, (iterations * 10003 * params->color));
 			if (iterations == 0)
-				pixel_put(params, x, y, 0);
+				pixel_color(params, x, y, 0);
 		}
 	}
 	mlx_put_image_to_window(params->mlx_ptr, params->mlx_win, params->img, 0, 0);

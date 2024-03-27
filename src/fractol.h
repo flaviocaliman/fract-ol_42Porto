@@ -6,7 +6,7 @@
 /*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:55:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/25 19:45:33 by caliman          ###   ########.fr       */
+/*   Updated: 2024/03/27 19:46:27 by caliman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,6 @@ int		keys_psd(int key, t_params *params);
 
 //img
 void	start_image(t_params *params);
-void	pixel_put(t_params *img, int x, int y, int iterations);
+void	pixel_color(t_params *img, int x, int y, int iterations);
 
 #endif
