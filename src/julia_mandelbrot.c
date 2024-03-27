@@ -6,12 +6,19 @@
 /*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:23:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/25 19:44:59 by caliman          ###   ########.fr       */
+/*   Updated: 2024/03/27 19:22:04 by caliman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "fractol.h"
+
+void pixel_put(t_params *img, int x, int y, int iterations)
+{
+	char	*dst;
+
+	dst = img->addr + (y * img->line_length + x * (img->bits / 8));
+	*(unsigned int*)dst = iterations;
+}
 
 int		iterations_julia(complex z, complex c)
 {
