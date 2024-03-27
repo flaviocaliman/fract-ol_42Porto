@@ -6,22 +6,21 @@
 /*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:55:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/27 19:46:27 by caliman          ###   ########.fr       */
+/*   Updated: 2024/03/27 20:07:16 by caliman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include "mlx/mlx.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <math.h>
+# include "mlx/mlx.h"
 
-# define DEC_BASE "0123456789.-"
 # define MANDELBROT "Mandelbrot"
 # define JULIA "Julia"
+# define DEC_BASE "0123456789.-"
 
 # define WIDTH 800
 # define HEIGHT 800
@@ -59,31 +58,33 @@ typedef struct s_params {
     
 }               t_params;
 
-//utils
-char    *ft_strchr(const char *str, int c);
-int		ft_strcmp(const char *s1, const char *s2);
-void	ft_putstr_fd(char *s, int fd);
-
-//utils2
-int		ft_strlen(char *str);
-char	*ft_strjoin(char const *s1, char const *s2);
-double	ft_atof(const char *str);
-
-//basics
-void	start_window(t_params *params, char *win_name);
+//basic0
 void	instructions(void);
 int		close_window(void *param);
+void	start_window(t_params *params, char *win_name);
 
-//draw
+//basic1
+char    *ft_strchr(const char *str, int c);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strlen(char *str);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_putstr_fd(char *s, int fd);
+
+//basic2
+double	ft_atof(const char *str);
+
+//image
+void	start_image(t_params *params);
+
+//julia_mandelbrot
 void	julia_set(t_params *params);
 void	mandelbrot_set(t_params *params);
+void	pixel_color(t_params *img, int x, int y, int iterations);
 
-//hooks
-int		mouse_zoom(int key, int x, int y, t_params *param);
+//keyboard
 int		keys_psd(int key, t_params *params);
 
-//img
-void	start_image(t_params *params);
-void	pixel_color(t_params *img, int x, int y, int iterations);
+//mouse
+int		mouse_zoom(int key, int x, int y, t_params *param);
 
 #endif

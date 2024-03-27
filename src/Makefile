@@ -6,7 +6,7 @@
 #    By: caliman <caliman@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 21:33:30 by caliman           #+#    #+#              #
-#    Updated: 2024/03/26 12:36:33 by caliman          ###   ########.fr        #
+#    Updated: 2024/03/27 20:12:59 by caliman          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,13 +27,9 @@ $(NAME): $(OBJ_SRC)
 	echo "\033[1m Ready to FRACT-OL \033[0m"
 
 clean:
-	rm -rf $(SRC:.c=.o)
+	rm -rf $(OBJ_SRC)
 
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-.PHONY: all, clean, fclean, re, bonus
-
-.SILENT:
