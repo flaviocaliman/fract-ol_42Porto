@@ -6,7 +6,7 @@
 #    By: caliman <caliman@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 21:33:30 by caliman           #+#    #+#              #
-#    Updated: 2024/03/27 20:12:59 by caliman          ###   ########.fr        #
+#    Updated: 2024/04/04 22:37:52 by caliman          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ_SRC)
 	$(CC) $(CFLAGS) $(OBJ_SRC) $(MLXFLAGS) -lm -o $(NAME)
-	echo "\033[1m Ready to FRACT-OL \033[0m"
 
 clean:
 	rm -rf $(OBJ_SRC)

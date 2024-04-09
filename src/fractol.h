@@ -6,7 +6,7 @@
 /*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:55:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/27 20:07:16 by caliman          ###   ########.fr       */
+/*   Updated: 2024/04/04 22:10:28 by caliman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ typedef struct s_params {
     int     color;
     void    *img;
     char    *addr;
-    int     bits;
-    int     line_length;
+    int     bits_per_pixel;
+    int     size_line;
     int     endian;
     double  real_nbr;
     double  imag_nbr;

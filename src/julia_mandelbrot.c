@@ -6,7 +6,7 @@
 /*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:23:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/27 19:46:07 by caliman          ###   ########.fr       */
+/*   Updated: 2024/04/04 22:47:18 by caliman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void pixel_color(t_params *img, int x, int y, int iterations)
 {
-	char	*dst;
+	char	*destiny;
 
-	dst = img->addr + (y * img->line_length + x * (img->bits / 8));
-	*(unsigned int*)dst = iterations;
+	destiny = img->addr + (y * img->size_line + x * (img->bits_per_pixel / 8));
+	*(unsigned int*)destiny = iterations;
 }
 
 int		iterations_julia(complex z, complex c)
@@ -103,7 +103,7 @@ void	mandelbrot_set(t_params *params)
 		x = -1;
 		while (++x < WIDTH)
 		{
-			z.r = params->zoom * 2 * (x + params->x_arrow - WIDTH / 1.7) / (WIDTH / 1.7);
+			z.r = params->zoom * 2 * (x + params->x_arrow - WIDTH / 1.6) / (WIDTH / 1.6);
 			z.i = params->zoom * 2 * (y + params->y_arrow- HEIGHT / 2) / (HEIGHT / 2);
 			iterations = iterations_mandelbrot(z);
 			pixel_color(params, x, y, (iterations * 10003 * params->color));
