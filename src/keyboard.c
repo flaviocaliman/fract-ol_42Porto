@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keyboard.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caliman <caliman@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:53:53 by caliman           #+#    #+#             */
-/*   Updated: 2024/03/25 19:44:02 by caliman          ###   ########.fr       */
+/*   Updated: 2024/04/19 17:28:50 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 int	keys_psd(int key, t_params *params)
 {
 	if (key == ESC)
+	{
+		mlx_destroy_window(params->mlx_ptr, params->mlx_win);
+		mlx_destroy_image(params->mlx_ptr, params->img);
+		mlx_destroy_display(params->mlx_ptr);
 		exit(0);
+	}
 	if (key == PLUS)
 		params->color += 1;
 	if (key == MINUS && params->color - 1 > 0)
