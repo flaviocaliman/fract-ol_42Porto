@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:53:53 by caliman           #+#    #+#             */
-/*   Updated: 2024/04/19 17:28:50 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/20 13:06:12 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	keys_psd(int key, t_params *params)
 		mlx_destroy_window(params->mlx_ptr, params->mlx_win);
 		mlx_destroy_image(params->mlx_ptr, params->img);
 		mlx_destroy_display(params->mlx_ptr);
+		if (params->mlx_ptr)
+			free(params->mlx_ptr);
 		exit(0);
 	}
 	if (key == PLUS)

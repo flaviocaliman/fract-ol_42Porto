@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:15:32 by fgomes-c          #+#    #+#             */
-/*   Updated: 2024/04/19 19:09:29 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/20 13:36:08 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	close_window(void *param)
 	t_params	*params;
 
 	params = (t_params *)param;
-	mlx_destroy_window(params->mlx_ptr, params->mlx_win);
-	mlx_destroy_display(params->mlx_ptr);
-	mlx_destroy_image(params->mlx_ptr, params->img);
+	//mlx_destroy_window(params->mlx_ptr, params->mlx_win);
+	//mlx_destroy_display(params->mlx_ptr);
+	//mlx_destroy_image(params->mlx_ptr, params->img);
 	(void)param;
 	exit(0);
 }
@@ -43,6 +43,7 @@ void	start_window(t_params *params, char *selected_ftl)
 	{
 		ft_putstr_fd("Error -> mlx_init()", 2);
 		cleanup(params);
+		free(params->mlx_ptr);
 		exit(0);
 	}
 	params->mlx_win = mlx_new_window(params->mlx_ptr, WIDTH, HEIGHT,
