@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:23:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/04/19 20:51:09 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/20 11:07:03 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	julia_set(t_params *params)
 		{
 			point.x = x;
 			point.y = y;
-			calculate_z_and_process_pixel(params, c, &point);
+			calculate_z_process_pixel(params, c, &point);
 		}
 	}
 	mlx_put_image_to_window(params->mlx_ptr, params->mlx_win, params->img,
