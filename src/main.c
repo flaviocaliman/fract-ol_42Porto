@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:50:55 by caliman           #+#    #+#             */
-/*   Updated: 2024/04/20 13:24:54 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:53:35 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,10 @@ int	main(int ac, char **av)
 		draw(av[1], &params);
 		mlx_mouse_hook(params.mlx_win, &mouse_zoom, (void *)&params);
 		mlx_hook(params.mlx_win, 2, (1L << 0), &keys_psd, &params);
-		//mlx_hook(params.mlx_win, 17, 0, &close_window, 0);
 		mlx_hook(params.mlx_win, 17, 0, &close_window, &params);
 		mlx_loop(params.mlx_ptr);
 	}
 	else
 		instructions();
-	
 	return (0);
 }

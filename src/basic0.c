@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:15:32 by fgomes-c          #+#    #+#             */
-/*   Updated: 2024/04/20 13:36:08 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:37:01 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,13 @@ void	instructions(void)
 	ft_putstr_fd("Let's go!\n", 1);
 }
 
-int	close_window(void *param)
+int	close_window(t_params *params)
 {
-	t_params	*params;
-
-	params = (t_params *)param;
-	//mlx_destroy_window(params->mlx_ptr, params->mlx_win);
-	//mlx_destroy_display(params->mlx_ptr);
-	//mlx_destroy_image(params->mlx_ptr, params->img);
-	(void)param;
+	mlx_destroy_window(params->mlx_ptr, params->mlx_win);
+	mlx_destroy_image(params->mlx_ptr, params->img);
+	mlx_destroy_display(params->mlx_ptr);
+	if (params->mlx_ptr)
+		free(params->mlx_ptr);
 	exit(0);
 }
 

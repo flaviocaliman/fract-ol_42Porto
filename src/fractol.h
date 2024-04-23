@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:55:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/04/20 13:06:28 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:36:00 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ typedef struct s_params
 
 //basic0
 void	instructions(void);
-int		close_window(void *param);
+int		close_window(t_params *params);
 void	start_window(t_params *params, char *win_name);
 void	cleanup(t_params *params);
 
