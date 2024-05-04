@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:55:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/04/23 11:36:00 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:13:15 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include "mlx/mlx.h"
+# include "../minilibx-linux/mlx.h"
 
 # define MANDELBROT "Mandelbrot"
 # define JULIA "Julia"
@@ -24,10 +24,9 @@
 
 # define WIDTH 800
 # define HEIGHT 800
-# define MAX_ITERATIONS 150
+# define MAX_ITERATIONS 50
 
-# define PLUS 65451
-# define MINUS 65453
+# define SHIFT 65505
 # define ESC 65307
 # define ARROW_DOWN 65364
 # define ARROW_RIGHT 65363
@@ -63,7 +62,6 @@ typedef struct s_params
 	int		endian;
 	double	real_nbr;
 	double	imag_nbr;
-
 }		t_params;
 
 //basic0

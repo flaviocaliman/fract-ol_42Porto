@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:23:07 by caliman           #+#    #+#             */
-/*   Updated: 2024/04/20 11:05:23 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:24:30 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	calculate_z_process_pixel(t_params *params, t_complex c, t_point *point)
 		/ (HEIGHT / 2);
 	point->iterations = iterations_julia(z, c);
 	pixel_color(params, point->x, point->y, point->iterations * params->color
-		/ 200);
+		/ 50);
 	if (point->iterations == 0)
 		pixel_color(params, point->x, point->y, 0);
 }

@@ -6,7 +6,7 @@
 /*   By: fgomes-c <fgomes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:15:32 by fgomes-c          #+#    #+#             */
-/*   Updated: 2024/04/23 11:37:01 by fgomes-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 14:32:16 by fgomes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ void	start_window(t_params *params, char *selected_ftl)
 		cleanup(params);
 		exit(0);
 	}
-	params->zoom = 1.0;
 	if (!ft_strcmp(selected_ftl, "Julia Set"))
 		params->selected_ftl = "Julia";
 	if (!ft_strcmp(selected_ftl, "Mandelbrot Set"))
 		params->selected_ftl = "Mandelbrot";
+	params->zoom = 1.0;
 	params->x_arrow = 0;
 	params->y_arrow = 0;
 	params->color = 1;
